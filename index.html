@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rialo Quiz Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      /* Ubah warna utama di sini */
+      --bg-dark: #111827;
+      --bg-panel: #1f2937;
+      --accent: #fbbf24;
+      --accent-2: #22d3ee;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --danger: #f97373;
+      --success: #4ade80;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%);
+      color: var(--text-main);
+    }
+
+    .game-container {
+      width: 100%;
+      max-width: 480px;
+      background: var(--bg-panel);
+      border: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 16px 16px 20px;
+      box-shadow: 0 0 0 4px #000, 0 24px 60px rgba(0, 0, 0, 0.8);
+      image-rendering: pixelated;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 10px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 2px solid #000;
+      background: linear-gradient(90deg, #111827, #020617);
+    }
+
+    .status-label {
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+
+    .pixel-line {
+      height: 4px;
+      background-image: linear-gradient(
+        90deg,
+        var(--accent) 0,
+        var(--accent) 25%,
+        var(--accent-2) 25%,
+        var(--accent-2) 50%,
+        var(--accent) 50%,
+        var(--accent) 75%,
+        var(--accent-2) 75%,
+        var(--accent-2) 100%
+      );
+      background-size: 16px 4px;
+      margin-bottom: 12px;
+    }
+
+    .question-box {
+      border-radius: 8px;
+      border: 3px solid #000;
+      padding: 10px;
+      background: #020617;
+      margin-bottom: 12px;
+    }
+
+    .question-number {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .question-text {
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .options {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .option-btn {
+      border-radius: 8px;
+      border: 3px solid #000;
+      padding: 8px 10px;
+      background: #111827;
+      color: var(--text-main);
+      cursor: pointer;
+      font-size: 14px;
+      text-align: left;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      transition: transform 0.04s ease, box-shadow 0.04s ease,
+        background 0.1s ease;
+    }
+
+    .option-key {
+      font-weight: 800;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 2px solid #000;
+      background: #020617;
+    }
+
+    .option-label {
+      flex: 1;
+    }
+
+    .option-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 0 #000;
+      background: #0f172a;
+    }
+
+    .option-btn.correct {
+      background: #065f46;
+      border-color: #000;
+    }
+
+    .option-btn.wrong {
+      background: #7f1d1d;
+      border-color: #000;
+    }
+
+    .control-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-main,
+    .btn-ghost {
+      flex: 1;
+      border-radius: 8px;
+      border: 3px solid #000;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: transform 0.04s ease, box-shadow 0.04s ease,
+        background 0.1s ease;
+    }
+
+    .btn-main {
+      background: linear-gradient(90deg, var(--accent), #f97316);
+      color: #111827;
+    }
+
+    .btn-ghost {
+      background: #020617;
+      color: var(--text-main);
+    }
+
+    .btn-main:hover,
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 0 #000;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .result-box {
+      text-align: center;
+      padding: 12px 10px;
+      border-radius: 8px;
+      border: 3px solid #000;
+      background: #020617;
+      margin-bottom: 12px;
+    }
+
+    .result-title {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .result-score {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .result-label {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .progress-dots {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      border: 2px solid #000;
+      background: #111827;
+    }
+
+    .dot.active {
+      background: var(--accent);
+    }
+
+    .dot.done {
+      background: var(--accent-2);
+    }
+
+    @media (max-width: 480px) {
+      .game-container {
+        border-width: 3px;
+        border-radius: 8px;
+        padding: 12px 10px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="title">Rialo Quiz</div>
+    <div class="subtitle">Test how well you know the Rialo universe ⚡</div>
+
+    <div class="status-bar">
+      <div>
+        <span class="status-label">Question</span>
+        <span id="question-counter">1 / 1</span>
+      </div>
+      <div>
+        <span class="status-label">Score</span>
+        <span id="score-label">0</span>
+      </div>
+    </div>
+
+    <div class="pixel-line"></div>
+
+    <div class="progress-dots" id="progress-dots"></div>
+
+    <div class="question-box">
+      <div class="question-number" id="question-number">Question 1</div>
+      <div class="question-text" id="question-text">
+        Loading question...
+      </div>
+    </div>
+
+    <div class="options" id="options-container"></div>
+
+    <div id="result-box" class="result-box hidden">
+      <div class="result-title" id="result-title">Well done!</div>
+      <div class="result-score" id="result-score">You scored 0 / 0</div>
+      <div class="result-label" id="result-label">
+        Tap "Play Again" to retry or improve your score.
+      </div>
+    </div>
+
+    <div class="control-row">
+      <button id="next-btn" class="btn-main">Next</button>
+      <button id="restart-btn" class="btn-ghost hidden">Play Again</button>
+    </div>
+  </div>
+
+  <script>
+    // ==========================
+    // DATA SOAL RIALO - EDIT DI SINI
+    // ==========================
+    const questions = [
+      {
+        text: "What is Rialo best known as in this universe?",
+        options: [
+          "A running shoes brand",
+          "A new blockchain",
+          "A mountain in Indonesia",
+          "A martial arts style",
+        ],
+        correctIndex: 0,
+      },
+      {
+        text: "What is the main focus of Rialo running shoes?",
+        options: [
+          "Luxury jewelry attachment",
+          "Speed and comfort for daily runners",
+          "Being as heavy as possible",
+          "Only for walking slowly",
+        ],
+        correctIndex: 1,
+      },
+      {
+        text: "If you see the Rialo logo on a game character, what does it represent?",
+        options: [
+          "That the character is a chef",
+          "That the character loves coding",
+          "That the character is an agile runner",
+          "That the character is afraid of sports",
+        ],
+        correctIndex: 2,
+      },
+      {
+        text: "Which of these sounds like a cool Rialo product line?",
+        options: [
+          "Rialo Street Runner",
+          "Rialo Heavy Brick",
+          "Rialo Slow Mode",
+          "Rialo Sleepy Feet",
+        ],
+        correctIndex: 0,
+      },
+      {
+        text: "Why would someone choose Rialo over random cheap shoes?",
+        options: [
+          "Because Rialo explodes when running",
+          "Because Rialo focuses on design, comfort, and style",
+          "Because Rialo makes you taller by 50 cm",
+          "Because Rialo cannot be worn outside",
+        ],
+        correctIndex: 1,
+      },
+    ];
+
+    // ==========================
+    // LOGIC GAME
+    // ==========================
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let hasAnswered = false;
+
+    const questionCounterEl = document.getElementById("question-counter");
+    const scoreLabelEl = document.getElementById("score-label");
+    const questionNumberEl = document.getElementById("question-number");
+    const questionTextEl = document.getElementById("question-text");
+    const optionsContainerEl = document.getElementById("options-container");
+    const progressDotsEl = document.getElementById("progress-dots");
+    const nextBtn = document.getElementById("next-btn");
+    const restartBtn = document.getElementById("restart-btn");
+    const resultBoxEl = document.getElementById("result-box");
+    const resultTitleEl = document.getElementById("result-title");
+    const resultScoreEl = document.getElementById("result-score");
+    const resultLabelEl = document.getElementById("result-label");
+
+    function init() {
+      currentQuestionIndex = 0;
+      score = 0;
+      hasAnswered = false;
+      scoreLabelEl.textContent = score;
+      resultBoxEl.classList.add("hidden");
+      restartBtn.classList.add("hidden");
+      nextBtn.classList.remove("hidden");
+      nextBtn.textContent = "Next";
+
+      renderProgressDots();
+      renderQuestion();
+    }
+
+    function renderProgressDots() {
+      progressDotsEl.innerHTML = "";
+      for (let i = 0; i < questions.length; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (i < currentQuestionIndex) {
+          dot.classList.add("done");
+        } else if (i === currentQuestionIndex) {
+          dot.classList.add("active");
+        }
+        progressDotsEl.appendChild(dot);
+      }
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQuestionIndex];
+
+      questionCounterEl.textContent =
+        currentQuestionIndex + 1 + " / " + questions.length;
+      questionNumberEl.textContent = "Question " + (currentQuestionIndex + 1);
+      questionTextEl.textContent = q.text;
+
+      optionsContainerEl.innerHTML = "";
+      hasAnswered = false;
+
+      q.options.forEach((optionText, index) => {
+        const btn = document.createElement("button");
+        btn.classList.add("option-btn");
+
+        const keySpan = document.createElement("span");
+        keySpan.classList.add("option-key");
+        keySpan.textContent = String.fromCharCode(65 + index); // A,B,C,D
+
+        const labelSpan = document.createElement("span");
+        labelSpan.classList.add("option-label");
+        labelSpan.textContent = optionText;
+
+        btn.appendChild(keySpan);
+        btn.appendChild(labelSpan);
+
+        btn.addEventListener("click", () =>
+          handleAnswer(btn, index, q.correctIndex)
+        );
+
+        optionsContainerEl.appendChild(btn);
+      });
+
+      renderProgressDots();
+    }
+
+    function handleAnswer(buttonEl, selectedIndex, correctIndex) {
+      if (hasAnswered) return;
+      hasAnswered = true;
+
+      const optionButtons = document.querySelectorAll(".option-btn");
+
+      optionButtons.forEach((btn, idx) => {
+        if (idx === correctIndex) {
+          btn.classList.add("correct");
+        }
+        if (idx === selectedIndex && selectedIndex !== correctIndex) {
+          btn.classList.add("wrong");
+        }
+        btn.style.cursor = "default";
+      });
+
+      if (selectedIndex === correctIndex) {
+        score++;
+        scoreLabelEl.textContent = score;
+      }
+
+      // Jika ini soal terakhir, ubah tombol Next jadi "Show Result"
+      if (currentQuestionIndex === questions.length - 1) {
+        nextBtn.textContent = "Show Result";
+      }
+    }
+
+    function showResult() {
+      resultBoxEl.classList.remove("hidden");
+      resultScoreEl.textContent =
+        "You scored " + score + " / " + questions.length;
+
+      const ratio = score / questions.length;
+      if (ratio === 1) {
+        resultTitleEl.textContent = "Rialo Master! 🏆";
+        resultLabelEl.textContent =
+          "You know the Rialo universe perfectly. Time to design more Rialo games!";
+      } else if (ratio >= 0.6) {
+        resultTitleEl.textContent = "Great Job! ⚡";
+        resultLabelEl.textContent =
+          "You already understand Rialo quite well. A little more and you'll be a master.";
+      } else {
+        resultTitleEl.textContent = "Keep Training 👟";
+        resultLabelEl.textContent =
+          "You still have room to grow. Learn more about Rialo and try again!";
+      }
+
+      nextBtn.classList.add("hidden");
+      restartBtn.classList.remove("hidden");
+    }
+
+    nextBtn.addEventListener("click", () => {
+      // Jika belum menjawab, paksa user memilih
+      if (!hasAnswered && currentQuestionIndex < questions.length) {
+        alert("Please choose an answer first.");
+        return;
+      }
+
+      // Jika sudah soal terakhir -> tampilkan result
+      if (currentQuestionIndex === questions.length - 1) {
+        showResult();
+        return;
+      }
+
+      currentQuestionIndex++;
+      renderQuestion();
+    });
+
+    restartBtn.addEventListener("click", () => {
+      init();
+    });
+
+    // Start game
+    init();
+  </script>
+</body>
+</html>
