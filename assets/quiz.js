@@ -1,7 +1,7 @@
-     // ==========================
-    // DATA SOAL RIALO - EDIT DI SINI
-    // ==========================
-    const questions = [
+// ==========================
+// DATA SOAL RIALO - EDIT DI SINI
+// ==========================
+const questions = [
   {
     text: "What type of blockchain is Rialo described as?",
     options: [
@@ -14,12 +14,7 @@
   },
   {
     text: "Which company is building Rialo?",
-    options: [
-      "Block.one",
-      "Consensys",
-      "Subzero Labs",
-      "Mysten Labs"
-    ],
+    options: ["Block.one", "Consensys", "Subzero Labs", "Mysten Labs"],
     correctIndex: 2
   },
   {
@@ -29,12 +24,7 @@
   },
   {
     text: "Who led Rialo’s seed funding round?",
-    options: [
-      "a16z",
-      "Pantera Capital",
-      "Paradigm",
-      "Binance Labs"
-    ],
+    options: ["a16z", "Pantera Capital", "Paradigm", "Binance Labs"],
     correctIndex: 1
   },
   {
@@ -59,12 +49,7 @@
   },
   {
     text: "What unique feature allows Rialo to communicate with the real world?",
-    options: [
-      "NFT bridges",
-      "Native HTTPS calls",
-      "Mining protocols",
-      "Layer-2 rollups"
-    ],
+    options: ["NFT bridges", "Native HTTPS calls", "Mining protocols", "Layer-2 rollups"],
     correctIndex: 1
   },
   {
@@ -79,12 +64,7 @@
   },
   {
     text: "Rialo eliminates the need for:",
-    options: [
-      "Smart contracts",
-      "Blockchain validators",
-      "Traditional oracles",
-      "Cryptographic hashing"
-    ],
+    options: ["Smart contracts", "Blockchain validators", "Traditional oracles", "Cryptographic hashing"],
     correctIndex: 2
   },
   {
@@ -99,42 +79,22 @@
   },
   {
     text: "Which virtual machine model is Rialo compatible with?",
-    options: [
-      "Move VM",
-      "EVM",
-      "Solana VM",
-      "Bitcoin Script"
-    ],
+    options: ["Move VM", "EVM", "Solana VM", "Bitcoin Script"],
     correctIndex: 2
   },
   {
     text: "What type of identity system does Rialo support?",
-    options: [
-      "Only wallet login",
-      "Email/SMS/social login",
-      "Passport-only login",
-      "No identity model"
-    ],
+    options: ["Only wallet login", "Email/SMS/social login", "Passport-only login", "No identity model"],
     correctIndex: 1
   },
   {
     text: "Which category best describes Rialo’s target developers?",
-    options: [
-      "DeFi-only devs",
-      "Web2 and Web3 developers",
-      "Game developers only",
-      "Mining engineers"
-    ],
+    options: ["DeFi-only devs", "Web2 and Web3 developers", "Game developers only", "Mining engineers"],
     correctIndex: 1
   },
   {
     text: "Rialo’s architecture allows:",
-    options: [
-      "Synchronous-only transactions",
-      "Native web connectivity",
-      "Zero cryptography",
-      "Unlimited block size"
-    ],
+    options: ["Synchronous-only transactions", "Native web connectivity", "Zero cryptography", "Unlimited block size"],
     correctIndex: 1
   },
   {
@@ -159,32 +119,17 @@
   },
   {
     text: "What problem does Rialo try to solve in Web3?",
-    options: [
-      "High transaction fees",
-      "Limited access to real-world data",
-      "Lack of NFT volume",
-      "Insufficient gaming utilities"
-    ],
+    options: ["High transaction fees", "Limited access to real-world data", "Lack of NFT volume", "Insufficient gaming utilities"],
     correctIndex: 1
   },
   {
     text: "Rialo's computation model is based on:",
-    options: [
-      "Reactive, event-driven execution",
-      "POW-only mining",
-      "Centralized cloud servers",
-      "Sequential-only execution"
-    ],
+    options: ["Reactive, event-driven execution", "POW-only mining", "Centralized cloud servers", "Sequential-only execution"],
     correctIndex: 0
   },
   {
     text: "Which of these is a core benefit of Rialo?",
-    options: [
-      "Instant gas-free bridging",
-      "Native off-chain triggers",
-      "GPU staking rewards",
-      "Anonymous block producers"
-    ],
+    options: ["Instant gas-free bridging", "Native off-chain triggers", "GPU staking rewards", "Anonymous block producers"],
     correctIndex: 1
   },
   {
@@ -199,12 +144,7 @@
   },
   {
     text: "Who can build on Rialo?",
-    options: [
-      "Only institutions",
-      "Web2 developers",
-      "Only Node validators",
-      "Only Solana devs"
-    ],
+    options: ["Only institutions", "Web2 developers", "Only Node validators", "Only Solana devs"],
     correctIndex: 1
   },
   {
@@ -219,72 +159,37 @@
   },
   {
     text: "Which phrase describes Rialo’s developer experience?",
-    options: [
-      "Blockchain with steep learning curve",
-      "Web2-like simplicity",
-      "Hard-coded oracles",
-      "SQL-style smart contracts"
-    ],
+    options: ["Blockchain with steep learning curve", "Web2-like simplicity", "Hard-coded oracles", "SQL-style smart contracts"],
     correctIndex: 1
   },
   {
     text: "Rialo’s investors include:",
-    options: [
-      "Susquehanna",
-      "FTX Ventures",
-      "Three Arrows Capital",
-      "Luna Foundation Guard"
-    ],
+    options: ["Susquehanna", "FTX Ventures", "Three Arrows Capital", "Luna Foundation Guard"],
     correctIndex: 0
   },
   {
     text: "Rialo enables apps to be triggered by:",
-    options: [
-      "Email only",
-      "Social media activity",
-      "Any web event or API response",
-      "Blockchain forks"
-    ],
+    options: ["Email only", "Social media activity", "Any web event or API response", "Blockchain forks"],
     correctIndex: 2
   },
   {
     text: "Rialo primarily benefits which type of applications?",
-    options: [
-      "Apps needing real-world data",
-      "Offline wallets",
-      "Random number generators",
-      "Mining rigs"
-    ],
+    options: ["Apps needing real-world data", "Offline wallets", "Random number generators", "Mining rigs"],
     correctIndex: 0
   },
   {
     text: "Rialo has the potential to replace which common system in Web3?",
-    options: [
-      "Keypair signatures",
-      "Oracle networks",
-      "Consensus mechanisms",
-      "Smart contract languages"
-    ],
+    options: ["Keypair signatures", "Oracle networks", "Consensus mechanisms", "Smart contract languages"],
     correctIndex: 1
   },
   {
     text: "On Rialo, developers can read live data from the web without:",
-    options: [
-      "External oracles",
-      "Smart contract code",
-      "Validators",
-      "APIs"
-    ],
+    options: ["External oracles", "Smart contract code", "Validators", "APIs"],
     correctIndex: 0
   },
   {
     text: "Which type of apps could benefit most from Rialo's event-driven model?",
-    options: [
-      "Trading bots and automated agents",
-      "Offline storage systems",
-      "Static NFT galleries",
-      "Cold wallets"
-    ],
+    options: ["Trading bots and automated agents", "Offline storage systems", "Static NFT galleries", "Cold wallets"],
     correctIndex: 0
   },
   {
@@ -299,161 +204,175 @@
   }
 ];
 
-    // ==========================
-    // LOGIC GAME
-    // ==========================
-    let currentQuestionIndex = 0;
-    let score = 0;
-    let hasAnswered = false;
+// ==========================
+// LOGIC GAME
+// ==========================
+let currentQuestionIndex = 0;
+let score = 0;
+let hasAnswered = false;
 
-    const questionCounterEl = document.getElementById("question-counter");
-    const scoreLabelEl = document.getElementById("score-label");
-    const questionNumberEl = document.getElementById("question-number");
-    const questionTextEl = document.getElementById("question-text");
-    const optionsContainerEl = document.getElementById("options-container");
-    const progressDotsEl = document.getElementById("progress-dots");
-    const nextBtn = document.getElementById("next-btn");
-    const restartBtn = document.getElementById("restart-btn");
-    const resultBoxEl = document.getElementById("result-box");
-    const resultTitleEl = document.getElementById("result-title");
-    const resultScoreEl = document.getElementById("result-score");
-    const resultLabelEl = document.getElementById("result-label");
+const questionCounterEl = document.getElementById("question-counter");
+const scoreLabelEl = document.getElementById("score-label");
+const questionNumberEl = document.getElementById("question-number");
+const questionTextEl = document.getElementById("question-text");
+const optionsContainerEl = document.getElementById("options-container");
+const progressDotsEl = document.getElementById("progress-dots");
+const nextBtn = document.getElementById("next-btn");
+const restartBtn = document.getElementById("restart-btn");
+const resultBoxEl = document.getElementById("result-box");
+const resultTitleEl = document.getElementById("result-title");
+const resultScoreEl = document.getElementById("result-score");
+const resultLabelEl = document.getElementById("result-label");
 
-    function init() {
-      currentQuestionIndex = 0;
-      score = 0;
-      hasAnswered = false;
-      scoreLabelEl.textContent = score;
-      resultBoxEl.classList.add("hidden");
-      restartBtn.classList.add("hidden");
-      nextBtn.classList.remove("hidden");
-      nextBtn.textContent = "Next";
+// POPUP ELEMENT
+const lowScorePopup = document.getElementById("lowScorePopup");
+const closePopupBtn = document.getElementById("closePopupBtn");
 
-      renderProgressDots();
-      renderQuestion();
+// CLOSE POPUP BUTTON
+closePopupBtn.addEventListener("click", () => {
+  lowScorePopup.classList.add("hidden");
+});
+
+function showLowScorePopup() {
+  lowScorePopup.classList.remove("hidden");
+}
+
+function init() {
+  currentQuestionIndex = 0;
+  score = 0;
+  hasAnswered = false;
+  scoreLabelEl.textContent = score;
+  resultBoxEl.classList.add("hidden");
+  restartBtn.classList.add("hidden");
+  nextBtn.classList.remove("hidden");
+  nextBtn.textContent = "Next";
+
+  lowScorePopup.classList.add("hidden"); // hide popup on restart
+
+  renderProgressDots();
+  renderQuestion();
+}
+
+function renderProgressDots() {
+  progressDotsEl.innerHTML = "";
+  for (let i = 0; i < questions.length; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i < currentQuestionIndex) {
+      dot.classList.add("done");
+    } else if (i === currentQuestionIndex) {
+      dot.classList.add("active");
     }
+    progressDotsEl.appendChild(dot);
+  }
+}
 
-    function renderProgressDots() {
-      progressDotsEl.innerHTML = "";
-      for (let i = 0; i < questions.length; i++) {
-        const dot = document.createElement("div");
-        dot.classList.add("dot");
-        if (i < currentQuestionIndex) {
-          dot.classList.add("done");
-        } else if (i === currentQuestionIndex) {
-          dot.classList.add("active");
-        }
-        progressDotsEl.appendChild(dot);
-      }
+function renderQuestion() {
+  const q = questions[currentQuestionIndex];
+
+  questionCounterEl.textContent =
+    currentQuestionIndex + 1 + " / " + questions.length;
+  questionNumberEl.textContent = "Question " + (currentQuestionIndex + 1);
+  questionTextEl.textContent = q.text;
+
+  optionsContainerEl.innerHTML = "";
+  hasAnswered = false;
+
+  q.options.forEach((optionText, index) => {
+    const btn = document.createElement("button");
+    btn.classList.add("option-btn");
+
+    const keySpan = document.createElement("span");
+    keySpan.classList.add("option-key");
+    keySpan.textContent = String.fromCharCode(65 + index);
+
+    const labelSpan = document.createElement("span");
+    labelSpan.classList.add("option-label");
+    labelSpan.textContent = optionText;
+
+    btn.appendChild(keySpan);
+    btn.appendChild(labelSpan);
+
+    btn.addEventListener("click", () =>
+      handleAnswer(btn, index, q.correctIndex)
+    );
+
+    optionsContainerEl.appendChild(btn);
+  });
+
+  renderProgressDots();
+}
+
+function handleAnswer(buttonEl, selectedIndex, correctIndex) {
+  if (hasAnswered) return;
+  hasAnswered = true;
+
+  const optionButtons = document.querySelectorAll(".option-btn");
+
+  optionButtons.forEach((btn, idx) => {
+    if (idx === correctIndex) {
+      btn.classList.add("correct");
     }
-
-    function renderQuestion() {
-      const q = questions[currentQuestionIndex];
-
-      questionCounterEl.textContent =
-        currentQuestionIndex + 1 + " / " + questions.length;
-      questionNumberEl.textContent = "Question " + (currentQuestionIndex + 1);
-      questionTextEl.textContent = q.text;
-
-      optionsContainerEl.innerHTML = "";
-      hasAnswered = false;
-
-      q.options.forEach((optionText, index) => {
-        const btn = document.createElement("button");
-        btn.classList.add("option-btn");
-
-        const keySpan = document.createElement("span");
-        keySpan.classList.add("option-key");
-        keySpan.textContent = String.fromCharCode(65 + index); // A,B,C,D
-
-        const labelSpan = document.createElement("span");
-        labelSpan.classList.add("option-label");
-        labelSpan.textContent = optionText;
-
-        btn.appendChild(keySpan);
-        btn.appendChild(labelSpan);
-
-        btn.addEventListener("click", () =>
-          handleAnswer(btn, index, q.correctIndex)
-        );
-
-        optionsContainerEl.appendChild(btn);
-      });
-
-      renderProgressDots();
+    if (idx === selectedIndex && selectedIndex !== correctIndex) {
+      btn.classList.add("wrong");
     }
+    btn.style.cursor = "default";
+  });
 
-    function handleAnswer(buttonEl, selectedIndex, correctIndex) {
-      if (hasAnswered) return;
-      hasAnswered = true;
+  if (selectedIndex === correctIndex) {
+    score++;
+    scoreLabelEl.textContent = score;
+  }
 
-      const optionButtons = document.querySelectorAll(".option-btn");
+  if (currentQuestionIndex === questions.length - 1) {
+    nextBtn.textContent = "Show Result";
+  }
+}
 
-      optionButtons.forEach((btn, idx) => {
-        if (idx === correctIndex) {
-          btn.classList.add("correct");
-        }
-        if (idx === selectedIndex && selectedIndex !== correctIndex) {
-          btn.classList.add("wrong");
-        }
-        btn.style.cursor = "default";
-      });
+function showResult() {
+  resultBoxEl.classList.remove("hidden");
+  resultScoreEl.textContent =
+    "You scored " + score + " / " + questions.length;
 
-      if (selectedIndex === correctIndex) {
-        score++;
-        scoreLabelEl.textContent = score;
-      }
+  const ratio = score / questions.length;
 
-      // Jika ini soal terakhir, ubah tombol Next jadi "Show Result"
-      if (currentQuestionIndex === questions.length - 1) {
-        nextBtn.textContent = "Show Result";
-      }
-    }
+  if (ratio === 1) {
+    resultTitleEl.textContent = "Rialo Master! 🏆";
+    resultLabelEl.textContent =
+      "You know the Rialo universe perfectly. Time to design more Rialo games!";
+  } else if (ratio >= 0.6) {
+    resultTitleEl.textContent = "Great Job! ⚡";
+    resultLabelEl.textContent =
+      "You already understand Rialo quite well. A little more and you'll be a master.";
+  } else {
+    resultTitleEl.textContent = "Keep Training 👟";
+    resultLabelEl.textContent =
+      "You still have room to grow. Learn more about Rialo and try again!";
 
-    function showResult() {
-      resultBoxEl.classList.remove("hidden");
-      resultScoreEl.textContent =
-        "You scored " + score + " / " + questions.length;
+    // === SHOW POPUP FOR LOW SCORE (<70%) ===
+    showLowScorePopup();
+  }
 
-      const ratio = score / questions.length;
-      if (ratio === 1) {
-        resultTitleEl.textContent = "Rialo Master! 🏆";
-        resultLabelEl.textContent =
-          "You know the Rialo universe perfectly. Time to design more Rialo games!";
-      } else if (ratio >= 0.6) {
-        resultTitleEl.textContent = "Great Job! ⚡";
-        resultLabelEl.textContent =
-          "You already understand Rialo quite well. A little more and you'll be a master.";
-      } else {
-        resultTitleEl.textContent = "Keep Training 👟";
-        resultLabelEl.textContent =
-          "You still have room to grow. Learn more about Rialo and try again!";
-      }
+  nextBtn.classList.add("hidden");
+  restartBtn.classList.remove("hidden");
+}
 
-      nextBtn.classList.add("hidden");
-      restartBtn.classList.remove("hidden");
-    }
+nextBtn.addEventListener("click", () => {
+  if (!hasAnswered && currentQuestionIndex < questions.length) {
+    alert("Please choose an answer first.");
+    return;
+  }
 
-    nextBtn.addEventListener("click", () => {
-      // Jika belum menjawab, paksa user memilih
-      if (!hasAnswered && currentQuestionIndex < questions.length) {
-        alert("Please choose an answer first.");
-        return;
-      }
+  if (currentQuestionIndex === questions.length - 1) {
+    showResult();
+    return;
+  }
 
-      // Jika sudah soal terakhir -> tampilkan result
-      if (currentQuestionIndex === questions.length - 1) {
-        showResult();
-        return;
-      }
+  currentQuestionIndex++;
+  renderQuestion();
+});
 
-      currentQuestionIndex++;
-      renderQuestion();
-    });
-
-    restartBtn.addEventListener("click", () => {
-      init();
-    });
-
-    // Start game
-    init();
+restartBtn.addEventListener("click", () => {
+  init();
+});
+init();
