@@ -48,7 +48,7 @@
     }
       .logo {
     position: relative;
-    top: 5px; /* turunkan 10px */
+    top: -55px; /* turunkan 10px */
       }
     .subtitle {
       text-align: center;
