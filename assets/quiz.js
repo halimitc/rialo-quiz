@@ -1,0 +1,459 @@
+     // ==========================
+    // DATA SOAL RIALO - EDIT DI SINI
+    // ==========================
+    const questions = [
+  {
+    text: "What type of blockchain is Rialo described as?",
+    options: [
+      "A gaming chain",
+      "A real-world blockchain",
+      "A privacy chain",
+      "A DeFi-only chain"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Which company is building Rialo?",
+    options: [
+      "Block.one",
+      "Consensys",
+      "Subzero Labs",
+      "Mysten Labs"
+    ],
+    correctIndex: 2
+  },
+  {
+    text: "How much funding did Rialo raise in its seed round (2025)?",
+    options: ["$5M", "$10M", "$20M", "$50M"],
+    correctIndex: 2
+  },
+  {
+    text: "Who led Rialo’s seed funding round?",
+    options: [
+      "a16z",
+      "Pantera Capital",
+      "Paradigm",
+      "Binance Labs"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Which of the following is an investor in Rialo?",
+    options: [
+      "Coinbase Ventures",
+      "Alameda Research",
+      "Multicoin Capital",
+      "FTX Ventures"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "What is Rialo’s core mission?",
+    options: [
+      "To build a new social media platform",
+      "To connect on-chain apps with real-world data and events",
+      "To replace Bitcoin",
+      "To build a private financial chain"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "What unique feature allows Rialo to communicate with the real world?",
+    options: [
+      "NFT bridges",
+      "Native HTTPS calls",
+      "Mining protocols",
+      "Layer-2 rollups"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Rialo apps can react instantly to real-world triggers using:",
+    options: [
+      "Hourly block execution",
+      "Push-button validation",
+      "Event-driven logic",
+      "Offline oracle syncing"
+    ],
+    correctIndex: 2
+  },
+  {
+    text: "Rialo eliminates the need for:",
+    options: [
+      "Smart contracts",
+      "Blockchain validators",
+      "Traditional oracles",
+      "Cryptographic hashing"
+    ],
+    correctIndex: 2
+  },
+  {
+    text: "Rialo smart contracts can pause, resume, and loop. This refers to:",
+    options: [
+      "Asynchronous programming",
+      "Blockchain bridging",
+      "Identity sharding",
+      "GPU optimization"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Which virtual machine model is Rialo compatible with?",
+    options: [
+      "Move VM",
+      "EVM",
+      "Solana VM",
+      "Bitcoin Script"
+    ],
+    correctIndex: 2
+  },
+  {
+    text: "What type of identity system does Rialo support?",
+    options: [
+      "Only wallet login",
+      "Email/SMS/social login",
+      "Passport-only login",
+      "No identity model"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Which category best describes Rialo’s target developers?",
+    options: [
+      "DeFi-only devs",
+      "Web2 and Web3 developers",
+      "Game developers only",
+      "Mining engineers"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Rialo’s architecture allows:",
+    options: [
+      "Synchronous-only transactions",
+      "Native web connectivity",
+      "Zero cryptography",
+      "Unlimited block size"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Which statement is TRUE about Rialo?",
+    options: [
+      "It can call any HTTPS API with one line of code",
+      "It relies primarily on Layer-2 oracles",
+      "It requires cross-chain bridges for all data",
+      "It only supports local data"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Rialo aims to reduce developer complexity by:",
+    options: [
+      "Removing smart contracts entirely",
+      "Allowing Web2-style programming models",
+      "Forcing the use of Solidity",
+      "Eliminating REST APIs"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "What problem does Rialo try to solve in Web3?",
+    options: [
+      "High transaction fees",
+      "Limited access to real-world data",
+      "Lack of NFT volume",
+      "Insufficient gaming utilities"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Rialo's computation model is based on:",
+    options: [
+      "Reactive, event-driven execution",
+      "POW-only mining",
+      "Centralized cloud servers",
+      "Sequential-only execution"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Which of these is a core benefit of Rialo?",
+    options: [
+      "Instant gas-free bridging",
+      "Native off-chain triggers",
+      "GPU staking rewards",
+      "Anonymous block producers"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "What best describes Rialo’s 'real-world chain'?",
+    options: [
+      "A chain operated offline",
+      "A chain that integrates real-time web data natively",
+      "A chain focused on exchange listings",
+      "A closed private ledger"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Who can build on Rialo?",
+    options: [
+      "Only institutions",
+      "Web2 developers",
+      "Only Node validators",
+      "Only Solana devs"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Rialo replaces traditional cron jobs with:",
+    options: [
+      "Gasless actions",
+      "On-chain timers and scheduled events",
+      "Validators-only triggers",
+      "External bridges"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Which phrase describes Rialo’s developer experience?",
+    options: [
+      "Blockchain with steep learning curve",
+      "Web2-like simplicity",
+      "Hard-coded oracles",
+      "SQL-style smart contracts"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "Rialo’s investors include:",
+    options: [
+      "Susquehanna",
+      "FTX Ventures",
+      "Three Arrows Capital",
+      "Luna Foundation Guard"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Rialo enables apps to be triggered by:",
+    options: [
+      "Email only",
+      "Social media activity",
+      "Any web event or API response",
+      "Blockchain forks"
+    ],
+    correctIndex: 2
+  },
+  {
+    text: "Rialo primarily benefits which type of applications?",
+    options: [
+      "Apps needing real-world data",
+      "Offline wallets",
+      "Random number generators",
+      "Mining rigs"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Rialo has the potential to replace which common system in Web3?",
+    options: [
+      "Keypair signatures",
+      "Oracle networks",
+      "Consensus mechanisms",
+      "Smart contract languages"
+    ],
+    correctIndex: 1
+  },
+  {
+    text: "On Rialo, developers can read live data from the web without:",
+    options: [
+      "External oracles",
+      "Smart contract code",
+      "Validators",
+      "APIs"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Which type of apps could benefit most from Rialo's event-driven model?",
+    options: [
+      "Trading bots and automated agents",
+      "Offline storage systems",
+      "Static NFT galleries",
+      "Cold wallets"
+    ],
+    correctIndex: 0
+  },
+  {
+    text: "Rialo’s long-term vision is to:",
+    options: [
+      "Make all blockchains obsolete",
+      "Power real-world automation and intelligent on-chain agents",
+      "Centralize Web3 infrastructure",
+      "Create a new NFT marketplace"
+    ],
+    correctIndex: 1
+  }
+];
+
+    // ==========================
+    // LOGIC GAME
+    // ==========================
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let hasAnswered = false;
+
+    const questionCounterEl = document.getElementById("question-counter");
+    const scoreLabelEl = document.getElementById("score-label");
+    const questionNumberEl = document.getElementById("question-number");
+    const questionTextEl = document.getElementById("question-text");
+    const optionsContainerEl = document.getElementById("options-container");
+    const progressDotsEl = document.getElementById("progress-dots");
+    const nextBtn = document.getElementById("next-btn");
+    const restartBtn = document.getElementById("restart-btn");
+    const resultBoxEl = document.getElementById("result-box");
+    const resultTitleEl = document.getElementById("result-title");
+    const resultScoreEl = document.getElementById("result-score");
+    const resultLabelEl = document.getElementById("result-label");
+
+    function init() {
+      currentQuestionIndex = 0;
+      score = 0;
+      hasAnswered = false;
+      scoreLabelEl.textContent = score;
+      resultBoxEl.classList.add("hidden");
+      restartBtn.classList.add("hidden");
+      nextBtn.classList.remove("hidden");
+      nextBtn.textContent = "Next";
+
+      renderProgressDots();
+      renderQuestion();
+    }
+
+    function renderProgressDots() {
+      progressDotsEl.innerHTML = "";
+      for (let i = 0; i < questions.length; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (i < currentQuestionIndex) {
+          dot.classList.add("done");
+        } else if (i === currentQuestionIndex) {
+          dot.classList.add("active");
+        }
+        progressDotsEl.appendChild(dot);
+      }
+    }
+
+    function renderQuestion() {
+      const q = questions[currentQuestionIndex];
+
+      questionCounterEl.textContent =
+        currentQuestionIndex + 1 + " / " + questions.length;
+      questionNumberEl.textContent = "Question " + (currentQuestionIndex + 1);
+      questionTextEl.textContent = q.text;
+
+      optionsContainerEl.innerHTML = "";
+      hasAnswered = false;
+
+      q.options.forEach((optionText, index) => {
+        const btn = document.createElement("button");
+        btn.classList.add("option-btn");
+
+        const keySpan = document.createElement("span");
+        keySpan.classList.add("option-key");
+        keySpan.textContent = String.fromCharCode(65 + index); // A,B,C,D
+
+        const labelSpan = document.createElement("span");
+        labelSpan.classList.add("option-label");
+        labelSpan.textContent = optionText;
+
+        btn.appendChild(keySpan);
+        btn.appendChild(labelSpan);
+
+        btn.addEventListener("click", () =>
+          handleAnswer(btn, index, q.correctIndex)
+        );
+
+        optionsContainerEl.appendChild(btn);
+      });
+
+      renderProgressDots();
+    }
+
+    function handleAnswer(buttonEl, selectedIndex, correctIndex) {
+      if (hasAnswered) return;
+      hasAnswered = true;
+
+      const optionButtons = document.querySelectorAll(".option-btn");
+
+      optionButtons.forEach((btn, idx) => {
+        if (idx === correctIndex) {
+          btn.classList.add("correct");
+        }
+        if (idx === selectedIndex && selectedIndex !== correctIndex) {
+          btn.classList.add("wrong");
+        }
+        btn.style.cursor = "default";
+      });
+
+      if (selectedIndex === correctIndex) {
+        score++;
+        scoreLabelEl.textContent = score;
+      }
+
+      // Jika ini soal terakhir, ubah tombol Next jadi "Show Result"
+      if (currentQuestionIndex === questions.length - 1) {
+        nextBtn.textContent = "Show Result";
+      }
+    }
+
+    function showResult() {
+      resultBoxEl.classList.remove("hidden");
+      resultScoreEl.textContent =
+        "You scored " + score + " / " + questions.length;
+
+      const ratio = score / questions.length;
+      if (ratio === 1) {
+        resultTitleEl.textContent = "Rialo Master! 🏆";
+        resultLabelEl.textContent =
+          "You know the Rialo universe perfectly. Time to design more Rialo games!";
+      } else if (ratio >= 0.6) {
+        resultTitleEl.textContent = "Great Job! ⚡";
+        resultLabelEl.textContent =
+          "You already understand Rialo quite well. A little more and you'll be a master.";
+      } else {
+        resultTitleEl.textContent = "Keep Training 👟";
+        resultLabelEl.textContent =
+          "You still have room to grow. Learn more about Rialo and try again!";
+      }
+
+      nextBtn.classList.add("hidden");
+      restartBtn.classList.remove("hidden");
+    }
+
+    nextBtn.addEventListener("click", () => {
+      // Jika belum menjawab, paksa user memilih
+      if (!hasAnswered && currentQuestionIndex < questions.length) {
+        alert("Please choose an answer first.");
+        return;
+      }
+
+      // Jika sudah soal terakhir -> tampilkan result
+      if (currentQuestionIndex === questions.length - 1) {
+        showResult();
+        return;
+      }
+
+      currentQuestionIndex++;
+      renderQuestion();
+    });
+
+    restartBtn.addEventListener("click", () => {
+      init();
+    });
+
+    // Start game
+    init();
