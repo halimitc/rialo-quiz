@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rialo Quiz Game</title>
+  <title>Rialo Quiz – upgrade your knowledge about Rialo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
    <!-- External CSS -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- popup -->
+  <div id="lowScorePopup" class="popup hidden">
+  <!-- popup -->
+    <button id="closePopupBtn">Close</button>
+  <!-- popup -->
+    <div class="popup-content">
+      <h2 class="popup-title">Keep Learning About Rialo</h2>
+      <p class="popup-message">
+        Sorry, your score is below 70%.  
+        You need to learn more about Rialo.  
+        Discover more information at our official blog.
+      </p>
+      <a href="https://www.rialo.io/blog" target="_blank" class="popup-btn">
+        Visit Rialo Blog
+      </a>
+    </div>
+  </div>
   <div class="game-container">
     <div class="title">Rialo Quiz <img src="assets/img/rialo.png" class="logo" alt="rialo logo" style="height:24px;"> </div>
-    <div class="subtitle">Test how well you know the Rialo universe </div>
+    <div class="subtitle">Test how well you know the Rialo universe</div>
 
     <div class="status-bar">
       <div>
@@ -50,6 +67,23 @@
       <button id="restart-btn" class="btn-ghost hidden">Play Again</button>
     </div>
   </div>
+  <!-- JELLY SLIME BACKGROUND -->
+<div class="slime-bg">
+  <div class="blob"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
+<!-- FUTURISTIC FALLING LINES -->
+<div class="background">
+  <div class="floating-lines">
+    <script>
+      for (let i = 0; i < 50; i++) {
+        document.write(`<div class="line" style="--i:${i};"></div>`);
+      }
+    </script>
+  </div>
+</div>
   <script src="assets/quiz.js"></script>
 </body>
 </html>
